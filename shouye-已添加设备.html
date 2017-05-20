@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/comm.css">
+    <link rel="stylesheet" href="css/shouye.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/comm.js"></script>
+    <script src="js/jquery.page.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            var dgree = 0;
+            $('.sl-zichanleixing-top a').click(function (){
+                $('.sl-zichanleixing-bottom').slideToggle(function (){
+                    $('.sl-zichanleixing-top a img').css({'transform': 'rotate(' + (dgree== 0 ? parseInt(180): parseInt(0)) + 'deg)'});
+                    dgree == 0? dgree=180:dgree=0;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav>
+        <div class="sl-nav clearfix" id="sl-nav">
+            <div class="brand">
+                <a href="#"><img width="70" height="70" src="image/brand.png"></a>
+                <span class="sl-sysname">石峦资产管理系统</span>
+            </div>
+            <div class="sl-user fr">
+                <span>上海冷铭运输有限公司(jiang@ininin.com)</span>
+                <a href="#" style="background: url('image/exit_icon.png') no-repeat left center">退出</a>
+            </div>
+        </div>
+    </nav>
+    <div class="contant clearfix" id="contant">
+        <div class="sl-left-box fl" id="sl-left-box">
+            <ul>
+            </ul>
+        </div>
+
+        <div class="sl-right-box fl" id="sl-right-box">
+
+            <div class="sl-zichanleixing">
+                <div class="sl-zichanleixing-top clearfix">
+                    <img src="image/zichanleixing.png">
+                    <span>资产类型概览</span>
+                    <a href="#" style="margin-right:10px;" class="fr"><img style="transform:rotate(0deg);transition: all 0.4s ease;" src="image/big-up-arrow.png"></a>
+                </div>
+                <div class="sl-zichanleixing-bottom">
+                    <div class="clearfix">
+                        <div class="type-box" style="background-color: #F79A4D;">
+                            <table>
+                                <tr><td colspan="2"><div><img src="image/car.png"><span>类型A</span></div></tr>
+                                <tr><td><span>总数量：11</span></td><td><span>已租量：21</span></td><td><span>待租量：4</span></td></tr>
+                                <tr><td><span>异常量：3</span></td><td><span>需维修：11</span></td><td></tr>
+                            </table>
+                        </div>
+                        <div class="type-box" style="background-color: #F79A4D;">
+                            <table>
+                                <tr><td colspan="2"><div><img src="image/car.png"><span>类型A</span></div></tr>
+                                <tr><td><span>总数量：11</span></td><td><span>已租量：21</span></td><td><span>待租量：4</span></td></tr>
+                                <tr><td><span>异常量：3</span></td><td><span>需维修：11</span></td><td></tr>
+                            </table>
+                        </div>
+                        <div class="type-box" style="background-color: #F79A4D;">
+                            <table>
+                                <tr><td colspan="2"><div><img src="image/car.png"><span>类型A</span></div></tr>
+                                <tr><td><span>总数量：11</span></td><td><span>已租量：21</span></td><td><span>待租量：4</span></td></tr>
+                                <tr><td><span>异常量：3</span></td><td><span>需维修：11</span></td><td></tr>
+                            </table>
+                        </div>
+                        <div class="type-box" style="background-color: #F79A4D;">
+                            <table>
+                                <tr><td colspan="2"><div><img src="image/car.png"><span>类型A</span></div></tr>
+                                <tr><td><span>总数量：11</span></td><td><span>已租量：21</span></td><td><span>待租量：4</span></td></tr>
+                                <tr><td><span>异常量：3</span></td><td><span>需维修：11</span></td><td></tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sl-zichanguiji">
+                <div class="sl-zichanguiji-top">
+                    <img src="image/zichanguiji.png">
+                    <span>资产轨迹详情</span>
+                </div>
+                <div class="sl-zichanguiji-bottom">
+                    <div id="map">
+                    </div>
+                    <div class="map-filter">
+                        <div class="map-search-form">
+                            <form>
+                                <span>地区</span>
+                                <select name="area"><option value="1">杭州</option><option value="2">北京</option></select>
+                                <span>状态</span>
+                                <select name="status"><option value="1">全部</option><option value="2">状态1</option></select>
+                                <input name="device_no" type="text" placeholder="设备名称、序列号">
+                                <button>搜索</button>
+                            </form>
+                        </div>
+                        <div class="list-container">
+                            <div class="list">
+                                <div class="cell">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2"><img src="image/table-img.png"></td>
+                                            <td><span>阴凉库1号</span><span>V0013101</span></td>
+                                            <td rowspan="2"><input type="radio">在线</td>
+                                            <td rowspan="2"><button>定位</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>运输A组</span><span>杭州</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="cell">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2"><img src="image/table-img.png"></td>
+                                            <td><span>阴凉库1号</span><span>V0013101</span></td>
+                                            <td rowspan="2"><input type="radio">在线</td>
+                                            <td rowspan="2"><button>定位</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>运输A组</span><span>杭州</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="cell">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2"><img src="image/table-img.png"></td>
+                                            <td><span>阴凉库1号</span><span>V0013101</span></td>
+                                            <td rowspan="2"><input type="radio">在线</td>
+                                            <td rowspan="2"><button>定位</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>运输A组</span><span>杭州</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="cell">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2"><img src="image/table-img.png"></td>
+                                            <td><span>阴凉库1号</span><span>V0013101</span></td>
+                                            <td rowspan="2"><input type="radio">在线</td>
+                                            <td rowspan="2"><button>定位</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>运输A组</span><span>杭州</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="cell">
+                                    <table>
+                                        <tr>
+                                            <td rowspan="2"><img src="image/table-img.png"></td>
+                                            <td><span>阴凉库1号</span><span>V0013101</span></td>
+                                            <td rowspan="2"><input type="radio">在线</td>
+                                            <td rowspan="2"><button>定位</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>运输A组</span><span>杭州</span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="page-control" class="clearfix"></div>
+                            <div class="hide">
+                                <img src="image/up-arrow.png">
+                                <a href="#">隐藏</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=S7L1HWu9QGyzGFGDudHYUTjQLj4of0l7"></script>
+    <script type="text/javascript">
+        var map = new BMap.Map("map");          // 创建地图实例
+        var point = new BMap.Point(116.404, 39.915);  // 创建点坐标
+        map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别
+        var opts = {type: BMAP_NAVIGATION_CONTROL_ZOOM, anchor:BMAP_ANCHOR_BOTTOM_RIGHT}
+        map.addControl(new BMap.NavigationControl(opts));
+    </script>
+    <script type="text/javascript">
+        var arr = $('.sl-zichanleixing-bottom >div div');
+        var count = arr.length;
+        var container = $('.sl-zichanleixing-bottom >div');
+        container.css({'width': ((250 + 20)*4 + 20) + 'px'})
+    </script>
+    <script type="text/javascript">
+        $('#page-control').createPage(function(n){
+            console.log(n);
+        },{
+            showTurn:false,//是否显示跳转,默认可以
+            showSumNum:false//是否显示总页码
+        },{
+
+        });
+    </script>
+</body>
+</html>

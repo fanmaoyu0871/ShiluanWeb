@@ -1,0 +1,314 @@
+.sl-center-box{
+    background-color: white;
+    height:400px;
+    width:800px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin:-200px 0 0 -400px;
+}
+
+
+/*top上 3个step*/
+.top{
+    height:80px;
+    border-bottom: 1px solid #E0DDE1 ;
+}
+
+.top .top-btn{
+    line-height: 80px;
+    width:33.3%;
+    text-align: center;
+}
+
+.top .top-btn.active{
+    border-bottom: 1px solid #437FBA;
+}
+
+.top-btn span:first-child{
+    display: inline-block;
+    height:50px;
+    width:50px;
+    vertical-align: middle;
+    line-height: 50px;
+    background: url('../image/lingxing-noselect.png') no-repeat center center;
+}
+
+.top-btn span:first-child.active{
+    background: url('../image/lingxing.png') no-repeat center center;
+}
+
+/*step 1*/
+.step1-bottom .bottom-btn{
+    width:50%;
+    text-align: center;
+    margin-top:100px;
+}
+
+.bottom-btn a p{
+    padding-top: 5px;
+}
+
+/*step 2*/
+.step2-bottom{
+    text-align: center;
+}
+
+.step2-bottom form input{
+    width:250px;
+    height:30px;
+}
+
+.step2-bottom form div:first-child{
+    margin-top: 50px;
+}
+
+.step2-bottom form div:not(:first-child){
+    margin-top: 30px;
+}
+
+.step2-bottom form input{
+    padding-left:30px;
+}
+
+.step2-bottom form div:nth-child(2){
+    position: relative;
+}
+
+.step2-bottom .sendbtn{
+    position: absolute;
+    left:550px;
+    top:1px;
+    background-color: #437FBA;
+    color: white;
+    font-size: 12px;
+    padding:10px;
+    border-radius: 5px;
+}
+
+.step2-bottom form div:last-child{
+    margin-top: 50px;
+}
+
+.step2-bottom form div:last-child>a{
+    color:white;
+    border-radius: 5px;
+    display: inline-block;
+    width:120px;
+    height:35px;
+    line-height: 35px;
+}
+
+.step2-bottom form div:last-child>a:first-child{
+    background-color: #6ACEE4;
+    margin-right: 50px;
+}
+
+.step2-bottom form div:last-child>a:last-child{
+    background-color: #5C71C2;
+}
+
+/*step 3  geren */
+
+.step3-geren-bottom{
+    text-align: center;
+}
+
+.step3-geren-bottom form input{
+    width:250px;
+    height:30px;
+}
+
+.step3-geren-bottom form img{
+    vertical-align: middle;
+}
+
+.step3-geren-bottom form div:first-child input{
+    width:100px;
+    height:30px;
+    padding-left: 10px;
+    margin-left: 5px;
+}
+
+.step3-geren-bottom form div:first-child span{
+    margin-left: 5px;
+}
+
+.step3-geren-bottom form div:first-child{
+    margin-top: 30px;
+}
+
+.step3-geren-bottom form div:not(:first-child){
+    margin-top: 20px;
+}
+
+.step3-geren-bottom form input{
+    padding-left:30px;
+}
+
+.step3-geren-bottom form div:nth-child(3){
+    position: relative;
+}
+
+.step3-geren-bottom .sendbtn{
+    position: absolute;
+    left:450px;
+    top:1px;
+    background-color: #437FBA;
+    color: white;
+    font-size: 12px;
+    padding:10px;
+    border-radius: 5px;
+}
+
+.step3-geren-bottom form div:last-child{
+    margin-top: 30px;
+}
+
+.step3-geren-bottom form div:last-child>a{
+    color:white;
+    border-radius: 5px;
+    display: inline-block;
+    width:120px;
+    height: 35px;
+    line-height: 35px;
+}
+
+.step3-geren-bottom form div:last-child>a:first-child{
+    background-color: #6ACEE4;
+    margin-right: 50px;
+}
+
+.step3-geren-bottom form div:last-child>a:last-child{
+    background-color: #5C71C2;
+}
+
+
+/* step 3 qiye*/
+
+.step3-qiye-bottom form input{
+    width:250px;
+    height:30px;
+}
+
+.step3-qiye-bottom form div input:first-child{
+    margin-left:60px;
+}
+
+.step3-qiye-bottom form img{
+    vertical-align: middle;
+}
+
+.step3-qiye-bottom form div input:nth-child(2){
+    margin-left: 50px;
+}
+
+.step3-qiye-bottom form div:nth-child(4) input:not(:first-child){
+    width:105px;
+}
+
+
+.step3-qiye-bottom form div:first-child{
+    text-align: center;
+}
+
+.step3-qiye-bottom form div:first-child span{
+    margin-left: 5px;
+}
+
+.step3-qiye-bottom form div:first-child{
+    margin-top: 30px;
+}
+
+.step3-qiye-bottom form div:not(:first-child){
+    margin-top: 20px;
+}
+
+.step3-qiye-bottom form input{
+    padding-left:30px;
+}
+
+
+.step3-qiye-bottom .sendbtn{
+    background-color: #437FBA;
+    color: white;
+    font-size: 12px;
+    padding:8px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.step3-qiye-bottom form div:last-child{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.step3-qiye-bottom form div:last-child>a{
+    color:white;
+    border-radius: 5px;
+    display: inline-block;
+    width:120px;
+    height:35px;
+    line-height: 35px;
+}
+
+.step3-qiye-bottom form div:last-child>a:first-child{
+    background-color: #6ACEE4;
+    margin-right: 50px;
+}
+
+.step3-qiye-bottom form div:last-child>a:last-child{
+    background-color: #5C71C2;
+}
+
+/*succ box*/
+.succ-box{
+    text-align: center;
+}
+
+.succ-box img{
+    margin-top:20px;
+}
+
+.succ-box h1{
+    font-size: 26px;
+    padding:5px;
+}
+
+.succ-box div:nth-of-type(1){
+    border: 1px solid #2BCCCF;
+    display: inline-block;
+    margin-top:20px;
+}
+
+.succ-box table tr td:first-child{
+    width:50%;
+    padding-right: 10px;
+}
+
+.succ-box table tr td:last-child{
+    width:50%;
+    padding-left:10px;
+}
+
+.succ-box table{
+    margin:0 auto;
+    border-radius: 5px;
+    border:1px solid #2BCCCF;
+
+}
+
+.succ-box table td{
+    padding:7px;
+}
+
+.succ-box a{
+    margin-top: 20px;
+    color:white;
+    border-radius: 5px;
+    display: inline-block;
+    width:120px;
+    height:35px;
+    line-height: 35px;
+    background-color: #5C71C2;
+}

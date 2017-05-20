@@ -1,0 +1,197 @@
+.sl-zichanleixing{
+    margin:20px;
+}
+
+.sl-zichanguiji{
+    margin:20px;
+}
+
+.sl-zichanleixing-top, .sl-zichanguiji-top{
+    background-color: #F1F6FD;
+    height:40px;
+    line-height: 40px;
+}
+
+.sl-zichanleixing-top span, .sl-zichanguiji-top span{
+    color:#437FBA;
+}
+
+.sl-zichanleixing-top img, .sl-zichanguiji-top img {
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.sl-zichanleixing-bottom{
+    height:200px;
+    overflow: auto;
+}
+
+
+.type-box{
+    float:left;
+    width:250px;
+    height:160px;
+    margin: 20px;
+    margin-right: 0px;
+    border-radius: 10px;
+}
+
+.type-box table{
+    width:100%;
+    height:100%;
+}
+
+
+.type-box table tr:first-child span{
+    font-size: 26px;
+    margin-left: 10px;
+}
+
+.type-box table tr span{
+    color:white;
+}
+
+.type-box table tr:not(:first-child){
+    text-align: center;
+}
+
+.type-box table tr:nth-of-type(1) td{
+    padding-top:10px;
+    padding-left: 10px;
+}
+
+.type-box table tr img{
+    vertical-align: middle;
+}
+
+.sl-zichanguiji-bottom{
+    height:500px;
+    position: relative;
+}
+
+#map{
+    width:100%;
+    height:100%;
+}
+
+.map-filter{
+    position: absolute;
+    left:20px;
+    top:20px;
+    width:370px;
+    height:450px;
+    background-color: transparent;
+}
+
+.map-search-form{
+    height:40px;
+    line-height:40px;
+}
+
+#page-control{
+    text-align: center;
+    padding:20px 0;
+}
+
+.map-search-form, .list-container{
+    box-shadow: 0px 1px 3px #383737;
+    background-color: white;
+}
+
+.list{
+    overflow-y: auto;
+    max-height:300px;
+}
+
+.map-search-form input{
+    font-size: 12px;
+    padding-left:5px;
+    margin-left: 5px;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+
+.map-search-form button{
+    background-color: #437FBA;
+    color:white;
+    border-radius: 3px;
+    padding:4px 8px;
+}
+
+.map-search-form span{
+    font-size:12px;
+    margin-left:5px;
+}
+
+.list-container{
+    margin-top:5px;
+}
+
+.cell table{
+    width:100%;
+}
+
+.cell table tr td{
+    height:40px;
+    vertical-align: middle;
+}
+
+.cell table tr{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.cell table tr td img{
+    margin-left:5px;
+}
+
+.cell table tr td span{
+    margin-right: 10px;
+}
+
+.cell button{
+    color:white;
+    background-color: #437FBA;
+    border-radius: 3px;
+    padding:4px 10px;
+}
+
+.hide{
+    text-align: center;
+    height:30px;
+    line-height: 30px;
+    border-top: 1px solid #F2F2F2;
+}
+
+.hide span{
+    font-size: 14px;
+}
+
+
+
+.btn-div{
+    margin-top:150px;
+}
+
+.btn-div > div:first-child{
+    width:50%;
+    text-align: right;
+}
+
+.btn-div > div:last-child{
+    width:50%;
+    text-align: left;
+}
+
+.btn-div > div a{
+    background-color: #437FBA;
+    color: white;
+    font-size: 16px;
+    padding:10px;
+    border-radius: 5px;
+    display: inline-block;
+    width:180px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+}

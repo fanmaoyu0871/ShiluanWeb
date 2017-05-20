@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/comm.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+
+            $(function (){
+                $(".box-top a").click(function(){
+                    if($(this).hasClass('active'))
+                        return;
+
+                    $(this).addClass('active');
+
+                    if($(this).attr('index') == '2'){
+                        $(".sl-login-box .form-box").eq(0).removeClass('active');
+                        $(".sl-login-box .form-box").eq(1).addClass('active');
+                        $(".box-top a").eq(0).removeClass('active');
+                    }else{
+                        $(".sl-login-box .form-box").eq(0).addClass('active');
+                        $(".sl-login-box .form-box").eq(1).removeClass('active');
+                        $(".box-top a").eq(1).removeClass('active');
+                    }
+                });
+            });
+    </script>
+</head>
+<body style="background-color: white">
+    <div class="sl-login-top">
+        <h1>石峦资产管理系统运营端</h1>
+    </div>
+    <div class="sl-middle-box">
+        <div class="sl-login-box">
+            <div class="box-top clearfix">
+                <div class="fl"><a index="1" href="javascript:void(0)" class="active">企业用户</a></div>
+                <div class="fl"><a index="2" href="javascript:void(0)" >个人用户</a></div>
+            </div>
+            <div class="form-box active">
+                <form>
+                    <div class="username">
+                        <input style="background: url('../image/user_icon.png') no-repeat 5px center" placeholder="用户名">
+                        <input style="background: url('../image/@_icon.png') no-repeat 5px center" placeholder="企业标识">
+                    </div>
+                    <div class="password">
+                        <input style="background: url('../image/password_icon.png') no-repeat 5px center" placeholder="密码">
+                    </div>
+                    <div class="verifycode">
+                        <input style="background: url('../image/yanzhengma_icon.png') no-repeat 5px center" placeholder="输入右侧验证码">
+                        <a href="#"><img style="vertical-align: middle" src="../image/yanzhengmashuzi.png" width="80" height="30"/></a>
+                    </div>
+                    <div class="forget_pwd">
+                        <a href="#">忘记密码？</a>
+                    </div>
+                    <div class="btn">
+                        <a href="#">登录</a>
+                    </div>
+                    <div class="btn">
+                        <a href="#">注册</a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box">
+                <form>
+                    <div class="username">
+                        <input style="width:280px; background: url('../image/user_icon.png') no-repeat 5px center" placeholder="用户名">
+                    </div>
+                    <div class="password">
+                        <input style="background: url('../image/password_icon.png') no-repeat 5px center" placeholder="密码">
+                    </div>
+                    <div class="verifycode">
+                        <input style="background: url('../image/yanzhengma_icon.png') no-repeat 5px center" placeholder="输入右侧验证码">
+                        <a href="#"><img style="vertical-align: middle" src="../image/yanzhengmashuzi.png" width="80" height="30"/></a>
+                    </div>
+                    <div class="forget_pwd">
+                        <a href="#">忘记密码？</a>
+                    </div>
+                    <div class="btn">
+                        <a href="#">登录</a>
+                    </div>
+                    <div class="btn">
+                        <a href="#">注册</a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
