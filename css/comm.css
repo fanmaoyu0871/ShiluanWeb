@@ -170,3 +170,11 @@ body> nav{
 #myModal .model-bottom a:last-child{
     background-color: #437FBA;
 }
+
+.sl-right-box > h1{
+    margin-top:20px;
+    margin-left: 20px;
+    font-size: 26px;
+    font-weight: 500;
+    color:#437FBA;
+}

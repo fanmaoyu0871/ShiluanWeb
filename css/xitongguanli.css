@@ -1,0 +1,94 @@
+.sl-caozuorizhi, .sl-yonghuxinxi{
+    margin:20px;
+    margin-bottom: 0px;
+}
+
+
+.sl-yonghuxinxi{
+    height:500px;
+    background-color: red;
+}
+
+.sl-caozuorizhi > div{
+    height:200px;
+    margin-top: 20px;
+}
+
+.sl-rizhi-box{
+    height:100%;
+    width:32%;
+    background-color: white;
+    box-shadow: #A29F9F 0px 1px 3px;
+    margin-right:14px;
+}
+
+.sl-rizhi-box img{
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.sl-rizhi-box > div:first-child span{
+    margin-left: 10px;
+    color: #437FBA;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.sl-rizhi-box > div:first-child a{
+    margin-right: 10px;
+}
+
+.sl-rizhi-box > div:first-child{
+    height:40px;
+    line-height: 40px;
+    background-color: #F1F6FD;
+}
+
+
+.sl-rizhi-box > div:last-child{
+    height:calc(100% - 40px);
+    overflow: auto;
+}
+
+.sl-rizhi-box > div:last-child table{
+    text-align: center;
+    width:100%;
+    margin-top:10px;
+}
+
+.sl-rizhi-box > div:last-child table tr:first-child span{
+    font-size: 16px;
+    color:white;
+}
+
+.sl-rizhi-box > div:last-child table tr:last-child td{
+    padding-top:10px;
+    font-size: 12px;
+}
+
+.sl-rizhi-box > div:last-child p{
+    height:30px;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+.sl-rizhi-box > div:last-child p span{
+    font-weight: 300;
+}
+
+.sl-yonghuxinxi>div:first-child{
+    height:40px;
+    line-height: 40px;
+    background-color: #F1F6FD;
+}
+
+.sl-yonghuxinxi>div:first-child img{
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.sl-yonghuxinxi>div:first-child span{
+    margin-left: 20px;
+    color:#437FBA;
+    font-size: 16px;
+}
