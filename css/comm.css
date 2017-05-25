@@ -173,7 +173,7 @@ body> nav{
     margin-top: 10px;
 }
 
-#typeModal .model-content table tr:not(:first-child):nth-of-type(even){
+#typeModal .model-content table tr:not(:first-child):nth-of-type(even), .sl-distri-table tr:not(:first-child):nth-of-type(even){
     background-color: #F0F0F0;
 }
 
@@ -181,8 +181,14 @@ body> nav{
     font-weight: 500;
 }
 
-#typeModal .model-content table tr th, #typeModal .model-content table tr td{
+.sl-distri-table tr th{
+    font-size: 14px;
+    padding:5px;
+}
+
+#typeModal .model-content table tr th, #typeModal .model-content table tr td, .sl-distri-table tr td{
     padding:10px 5px;
+    font-size: 12px;
 }
 
 .sl-dialog .model-top a{
@@ -199,7 +205,7 @@ body> nav{
     text-align: right;
 }
 
-.sl-dialog .model-bottom a{
+.sl-dialog .model-bottom a, .sl-dialog .searchBtn{
     font-size: 14px;
     margin-right: 30px;
     padding:5px 20px;
@@ -211,7 +217,7 @@ body> nav{
     background-color: #CFCECE;
 }
 
-.sl-dialog .model-bottom a:last-child{
+.sl-dialog .model-bottom a:last-child, .sl-dialog .searchBtn{
     background-color: #437FBA;
 }
 
@@ -222,3 +228,4 @@ body> nav{
     font-weight: 500;
     color:#437FBA;
 }
+
