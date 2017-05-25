@@ -90,20 +90,6 @@
                         $('#addModal .model-top a').click(function (){
                             addModal.close();
                         });
-
-                        //管理按钮事件
-                        $('.managerBtn').click(function(){
-                            $('#typeModal').load('./managerDialog.html', function(){
-                                var model = new jBox('Modal',
-                                        {content:$('#typeModal'), closeButton:false});
-
-                                model.open();
-
-                                $('#typeModal .model-top a').click(function (){
-                                    model.close();
-                                });
-                            });
-                    });
                     });
                 }
             });
@@ -150,8 +136,6 @@
 <!--添加设备-->
 <div id="addModal"></div>
 
-<!--管理按钮事件对话框-->
-<div id="typeModal"></div>
 
 </body>
 </html>
