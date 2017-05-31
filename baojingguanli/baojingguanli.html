@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报警管理</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/comm.css">
+    <link rel="stylesheet" href="../css/baojingguanli.css">
+    <link href="../css/jBox.css" rel="stylesheet">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="http://code.jboxcdn.com/0.4.8/jBox.min.js"></script>
+    <script src="../js/comm.js"></script>
+    <script src="../js/jquery.page.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            $('.sl-guizeliebiao form a').click(function (){
+                $('#addModal').load('./createRuleDialog.html', function(){
+                    var addModal = new jBox('Modal',
+                            {content:$('#addModal'), closeButton:false});
+                    addModal.open();
+
+                    //绑定一些事件
+                    $('#addModal .model-top a').click(function (){
+                        addModal.close();
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<!-- navbar -->
+<nav>
+    <div class="sl-nav clearfix" id="sl-nav">
+        <div class="brand">
+            <a href="#"><img width="70" height="70" src="../image/brand.png"></a>
+            <span class="sl-sysname">石峦资产管理系统</span>
+        </div>
+        <div class="sl-user fr">
+            <span>上海冷铭运输有限公司(jiang@ininin.com)</span>
+            <a href="#" style="background: url('../image/exit_icon.png') no-repeat left center">退出</a>
+        </div>
+    </div>
+</nav>
+<div class="contant clearfix" id="contant">
+    <div class="sl-left-box fl" id="sl-left-box">
+        <ul>
+        </ul>
+    </div>
+
+    <div class="sl-right-box fl" id="sl-right-box">
+        <h1>操作日志</h1>
+
+        <div class="sl-guizeliebiao">
+            <div><img src="../image/guizeliebiao.png"><span>规则列表</span></div>
+            <div>
+                <form class="clearfix">
+                    <a href="#">新建规则</a>
+                    <span>起始日期</span>
+                    <input type="date">
+                    <span>截止日期</span>
+                    <input type="date">
+                    <input type="text" placeholder="模版名称">
+                    <button>搜索</button>
+                    <button class="fr">数据导出</button>
+                </form>
+            </div>
+            <div class="table">
+                <table >
+                    <tr><th>模板名称</th><th>生效类型</th><th>编辑</th></tr>
+                    <tr><td>模板A</td><td>类型A；类型B；类型C</td><td><a href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>模板A</td><td>类型A；类型B；类型C</td><td><a href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>模板A</td><td>类型A；类型B；类型C</td><td><a href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>模板A</td><td>类型A；类型B；类型C</td><td><a href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--创建规则-->
+<div id="addModal"></div>
+
+</body>
+</html>

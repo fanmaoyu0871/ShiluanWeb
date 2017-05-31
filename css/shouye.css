@@ -78,7 +78,7 @@
     position: absolute;
     left:20px;
     top:20px;
-    width:370px;
+    width:400px;
     height:450px;
     background-color: transparent;
 }
@@ -109,6 +109,7 @@
     margin-left: 5px;
     padding-top:2px;
     padding-bottom:2px;
+    width:130px;
 }
 
 .map-search-form button{

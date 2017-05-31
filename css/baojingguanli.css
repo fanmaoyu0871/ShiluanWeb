@@ -1,0 +1,97 @@
+.sl-guizeliebiao{
+    margin:10px;
+    margin-bottom: 0px;
+}
+
+
+.sl-guizeliebiao>div:first-child{
+    height:40px;
+    line-height: 40px;
+    background-color: #F1F6FD;
+}
+
+.sl-guizeliebiao>div:first-child img{
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.sl-guizeliebiao>div:first-child span{
+    margin-left: 20px;
+    color:#437FBA;
+    font-size: 16px;
+}
+
+.sl-guizeliebiao .table table{
+    width:100%;
+    text-align: center;
+}
+
+.sl-guizeliebiao .table table td, .sl-guizeliebiao .table table th{
+    border:1px solid #D8D8D8;
+}
+
+
+.sl-guizeliebiao .table table td, .sl-guizeliebiao .table table th{
+    padding:10px;
+}
+
+.sl-guizeliebiao .table table tr td a:first-child{
+    margin-right: 20px;
+}
+
+.sl-guizeliebiao .table table tr td a:last-child{
+    margin-left: 20px;
+}
+
+.sl-guizeliebiao .table table tr:nth-of-type(even){
+    background-color: #F0F0F0;
+}
+
+.sl-guizeliebiao .table{
+    margin:20px;
+    padding-bottom: 20px;
+}
+
+.sl-guizeliebiao > div:nth-of-type(2){
+    margin-top:10px;
+}
+
+.sl-guizeliebiao  form{
+    margin:0px 20px;
+}
+
+.sl-guizeliebiao  form  a{
+    padding:5px 15px;
+    background-color: #77ACE9;
+    color:white;
+    border-radius: 5px;
+}
+
+.sl-guizeliebiao  form span{
+    margin-left: 10px;
+}
+
+.sl-guizeliebiao button{
+    background-color: #437FBA;
+    border-radius: 5px;
+    color:white;
+    padding:5px 10px;
+    cursor: pointer;
+}
+
+.sl-guizeliebiao form input[type="text"]{
+    margin-left: 10px;
+    padding-left: 5px;
+}
+
+.sl-guizeliebiao button:nth-of-type(1){
+    margin-left: 10px;
+}
+
+.sl-guizeliebiao  form input{
+    height:25px;
+}
+
+.sl-guizeliebiao{
+    box-shadow: #A29F9F 0px 1px 3px;
+}
