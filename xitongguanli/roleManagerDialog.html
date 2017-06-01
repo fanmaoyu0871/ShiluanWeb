@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/comm.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .model-content > div a{
+            background-color: #437FBA;
+            padding:5px 10px;
+            font-size: 12px;
+            color:white;
+            border-radius: 5px;
+            margin-right: 10px;;
+        }
+
+        .model-content > div table{
+            width:100%;
+            text-align: center;
+        }
+
+        .model-content > div table tr:nth-of-type(even){
+            background-color: #F0F0F0;
+        }
+
+        .model-content > div table th, .model-content > div table td{
+            padding: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function (){
+            $('.sl-createBtn').click(function (){
+                $('#createModal').load('./createRoleDialog.html', function(){
+                    var addModal = new jBox('Modal',
+                            {content:$('#createModal'), closeButton:false});
+                    addModal.open();
+
+                    //绑定一些事件
+                    $('#createModal .model-top a').click(function (){
+                        addModal.close();
+                    });
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+<div class="sl-dialog" id="myModal" style="width: 500px; background-color: white">
+    <div class="model-top clearfix">
+        <p class="fl">角色管理</p>
+        <a class="fr" href="#">X</a>
+    </div>
+    <div class="model-content" style="padding:20px 20px; ">
+        <div class="clearfix">
+            <span>角色：</span>
+            <select><option value="1">管理员</option><option value="2">role1</option></select>
+            <a class="sl-saveBtn fr" href="#">保存</a>
+            <a class="sl-createBtn fr" href="#">新建</a>
+        </div>
+        <div style="max-height: 150px;overflow: auto;margin-top: 10px;">
+            <table>
+                <tr><th>模块</th><th>功能</th><th>查看</th><th>创建</th><th>编辑</th><th>删除</th><th>导出</th></tr>
+                <tr><td>设备管理</td><td>设备</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+                <tr><td>设备管理</td><td>设备</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+                <tr><td>设备管理</td><td>设备</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+                <tr><td>设备管理</td><td>设备</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+                <tr><td>设备管理</td><td>设备</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+                <tr><td>设备管理</td><td>设备</td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td><td><input type="checkbox"></td></tr>
+            </table>
+        </div>
+
+    </div>
+    <div class="model-bottom">
+        <a href="#">取消</a>
+        <a href="#">保存</a>
+    </div>
+</div>
+<div id="createModal"></div>
+</body>
+</html>

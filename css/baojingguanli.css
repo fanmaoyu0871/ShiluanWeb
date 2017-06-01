@@ -71,6 +71,11 @@
     margin-left: 10px;
 }
 
+.sl-guizeliebiao  form select{
+    height:26px;
+    width:100px;
+}
+
 .sl-guizeliebiao button{
     background-color: #437FBA;
     border-radius: 5px;

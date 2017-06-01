@@ -6,9 +6,67 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/comm.css">
     <link rel="stylesheet" href="../css/xitongguanli.css">
+    <link href="../css/jBox.css" rel="stylesheet">
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="../js/comm.js"></script>
     <script src="../js/jquery.page.js"></script>
+    <script src="http://code.jboxcdn.com/0.4.8/jBox.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            $(".sl-companyInfoBtn").click(function (){
+                $('#addModal').load('./companyInfoDialog.html', function(){
+                    var addModal = new jBox('Modal',
+                            {content:$('#addModal'), closeButton:false});
+                    addModal.open();
+
+                    //绑定一些事件
+                    $('#addModal .model-top a').click(function (){
+                        addModal.close();
+                    });
+                });
+            });
+
+            $('.sl-managerInfoBtn').click(function (){
+                $('#addModal').load('./companyRoleDialog.html', function(){
+                    var addModal = new jBox('Modal',
+                            {content:$('#addModal'), closeButton:false});
+                    addModal.open();
+
+                    //绑定一些事件
+                    $('#addModal .model-top a').click(function (){
+                        addModal.close();
+                    });
+                });
+            });
+
+            $('.sl-create-role-btn').click(function (){
+                $('#addModal').load('./createUserDialog.html', function(){
+                    var addModal = new jBox('Modal',
+                            {content:$('#addModal'), closeButton:false});
+                    addModal.open();
+
+                    //绑定一些事件
+                    $('#addModal .model-top a').click(function (){
+                        addModal.close();
+                    });
+                });
+            });
+
+            $('.sl-role-manager-btn').click(function (){
+                $('#addModal').load('./roleManagerDialog.html', function(){
+                    var addModal = new jBox('Modal',
+                            {content:$('#addModal'), closeButton:false});
+                    addModal.open();
+
+                    //绑定一些事件
+                    $('#addModal .model-top a').click(function (){
+                        addModal.close();
+                    });
+                });
+            });
+        })
+
+    </script>
 </head>
 <body>
 <!-- navbar -->
@@ -36,7 +94,7 @@
         <div class="sl-caozuorizhi">
             <div class="clearfix">
                 <div class="sl-rizhi-box fl">
-                    <div class="clearfix"><img src="../image/rizhi-first.png"><span>资产类型概览</span><a class="fr" href="#"><img src="../image/rizhi-edit.png"></a></div>
+                    <div class="clearfix"><img src="../image/rizhi-first.png"><span>企业信息</span><a class="sl-companyInfoBtn fr" href="#"><img src="../image/rizhi-edit.png"></a></div>
                     <div>
                         <p>企业名称：<span>上海冷铭运输公司</span></p>
                         <p>企业名称：<span>上海冷铭运输公司</span></p>
@@ -47,7 +105,7 @@
                     </div>
                 </div>
                 <div class="sl-rizhi-box fl">
-                    <div class="clearfix"><img src="../image/rizhi-second.png"><span>企业管理员信息</span><a class="fr" href="#"><img src="../image/rizhi-edit.png"></a></div>
+                    <div class="clearfix"><img src="../image/rizhi-second.png"><span>企业管理员信息</span><a class="sl-managerInfoBtn fr" href="#"><img src="../image/rizhi-edit.png"></a></div>
                     <div>
                         <p>账号：<span>Alalei</span></p>
                         <p>姓名：<span>阿拉蕾</span></p>
@@ -73,25 +131,36 @@
         <div class="sl-yonghuxinxi">
             <div><img src="../image/yonghuxinxi.png"><span>用户信息</span></div>
             <div>
-                <form>
+                <form class="clearfix">
                     <span>起始日期</span>
                     <input type="date">
                     <span>截止日期</span>
                     <input type="date">
                     <input type="text" placeholder="用户姓名、手机号、账号">
-                    <button>搜索</button>
-                    <button>创建用户</button>
-                    <button>角色管理</button>
+                    <a href="#">搜索</a>
+                    <a class="sl-role-manager-btn fr" href="#" >角色管理</a>
+                    <a class="sl-create-role-btn fr" href="#">创建用户</a>
                 </form>
             </div>
-            <div>
+            <div class="sl-table">
                 <table>
                     <tr><th>用户名</th><th>姓名</th><th>手机</th><th>邮箱</th><th>角色</th><th>归属</th><th>创建时间</th><th>编辑</th></tr>
-                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td></tr>
+                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td><a class="sl-edit-btn" href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a class="sl-delete-btn" href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td><a class="sl-edit-btn" href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a class="sl-delete-btn" href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td><a class="sl-edit-btn" href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a class="sl-delete-btn" href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td><a class="sl-edit-btn" href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a class="sl-delete-btn" href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td><a class="sl-edit-btn" href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a class="sl-delete-btn" href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td><a class="sl-edit-btn" href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a class="sl-delete-btn" href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td><a class="sl-edit-btn" href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a class="sl-delete-btn" href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td><a class="sl-edit-btn" href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a class="sl-delete-btn" href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td><a class="sl-edit-btn" href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a class="sl-delete-btn" href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td><a class="sl-edit-btn" href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a class="sl-delete-btn" href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
+                    <tr><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td>aaaaaaa</td><td><a class="sl-edit-btn" href="#"><img style="vertical-align: middle" src="../image/edit.png"></a><a class="sl-delete-btn" href="#"><img style="vertical-align: middle" src="../image/delete.png"></a></td></tr>
                 </table>
             </div>
         </div>
     </div>
 </div>
+<div id="addModal"></div>
 </body>
 </html>

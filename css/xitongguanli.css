@@ -5,17 +5,16 @@
 
 
 .sl-yonghuxinxi{
-    height:500px;
-    background-color: red;
+    box-shadow: #A29F9F 0px 1px 3px;
+    margin-bottom: 20px;
 }
 
 .sl-caozuorizhi > div{
-    height:200px;
     margin-top: 20px;
 }
 
 .sl-rizhi-box{
-    height:100%;
+    height:200px;
     width:32%;
     background-color: white;
     box-shadow: #A29F9F 0px 1px 3px;
@@ -76,6 +75,10 @@
     font-weight: 300;
 }
 
+.sl-yonghuxinxi{
+    background-color: white;
+}
+
 .sl-yonghuxinxi>div:first-child{
     height:40px;
     line-height: 40px;
@@ -91,4 +94,69 @@
     margin-left: 20px;
     color:#437FBA;
     font-size: 16px;
+}
+
+.sl-yonghuxinxi>div:nth-child(2){
+    height:60px;
+    line-height: 60px;
+}
+
+.sl-yonghuxinxi>div form input[type='text']{
+    width:150px;
+}
+
+.sl-yonghuxinxi>div form input{
+    height:26px;
+}
+
+.sl-yonghuxinxi>div form span{
+    margin-left: 10px;
+}
+
+.sl-yonghuxinxi>div form a{
+    border-radius: 5px;
+    background-color: #437FBA;
+    color:white;
+    cursor: pointer;
+    height:20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.sl-yonghuxinxi>div form a:not(:first-child){
+    padding:5px 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.sl-yonghuxinxi>div form a:last-child{
+    margin-right: 10px;
+}
+
+.sl-table{
+    padding-bottom: 10px;
+}
+
+.sl-table table{
+    width:calc(100% - 20px);
+    text-align: center;
+    margin:auto 10px;
+}
+
+.sl-table table th, .sl-table table td{
+    vertical-align: middle;
+    padding:10px;
+    border:1px solid #D8D8D8;
+}
+
+.sl-table table tr:nth-of-type(even){
+    background-color: #F0F0F0;
+}
+
+.sl-table table tr td a:first-child{
+    margin-right: 10px;
+}
+
+.sl-table table tr td a:last-child{
+    margin-left: 10px;
 }

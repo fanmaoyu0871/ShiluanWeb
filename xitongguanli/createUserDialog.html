@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/comm.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <style>
+        .model-content div{
+            height:40px;
+            line-height: 40px;
+            padding-left: 20px;
+        }
+        .model-content div input{
+            height:26px;
+            width:200px;
+            padding-left:5px;
+            color:#9B9B9B;
+        }
+
+        .model-content div select{
+            width:200px;
+            height:26px;
+        }
+    </style>
+</head>
+<body>
+<div class="sl-dialog" id="myModal" style="width: 500px; background-color: white">
+    <div class="model-top clearfix">
+        <p class="fl">创建用户</p>
+        <a class="fr" href="#">X</a>
+    </div>
+    <div class="model-content" style="padding:20px 20px; ">
+        <div><span>登录名：</span><input type="text" placeholder="输入用户名"></div>
+        <div><span>密&nbsp;&nbsp;&nbsp;码：</span><input type="text" placeholder="创建密码"></div>
+        <div><span>姓&nbsp;&nbsp;&nbsp;名：</span><input type="text" placeholder="用户真实姓名"></div>
+        <div><span>手&nbsp;&nbsp;&nbsp;机：</span><input type="text" placeholder="11位手机号码"></div>
+        <div><span>邮&nbsp;&nbsp;&nbsp;箱：</span><input type="text" placeholder="电子邮箱地址"></div>
+        <div><span>角&nbsp;&nbsp;&nbsp;色：</span><select><option value="1">管理员</option><option value="2">role1</option></select></div>
+        <div><span>归&nbsp;&nbsp;&nbsp;属：</span><select><option value="1">管理员</option><option value="2">role1</option></select></div>
+    </div>
+    <div class="model-bottom">
+        <a href="#">取消</a>
+        <a href="#">保存</a>
+    </div>
+</div>
+</body>
+</html>
