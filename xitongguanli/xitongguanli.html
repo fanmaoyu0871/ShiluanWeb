@@ -16,12 +16,13 @@
             $(".sl-companyInfoBtn").click(function (){
                 $('#addModal').load('./companyInfoDialog.html', function(){
                     var addModal = new jBox('Modal',
-                            {content:$('#addModal'), closeButton:false});
+                            {content:$('#addModal'), closeButton:false, closeOnClick:false});
                     addModal.open();
 
                     //绑定一些事件
                     $('#addModal .model-top a').click(function (){
                         addModal.close();
+                        addModal.destroy();
                     });
                 });
             });
@@ -29,12 +30,13 @@
             $('.sl-managerInfoBtn').click(function (){
                 $('#addModal').load('./companyRoleDialog.html', function(){
                     var addModal = new jBox('Modal',
-                            {content:$('#addModal'), closeButton:false});
+                            {content:$('#addModal'), closeButton:false, closeOnClick:false});
                     addModal.open();
 
                     //绑定一些事件
                     $('#addModal .model-top a').click(function (){
                         addModal.close();
+                        addModal.destroy();
                     });
                 });
             });
@@ -42,12 +44,13 @@
             $('.sl-create-role-btn').click(function (){
                 $('#addModal').load('./createUserDialog.html', function(){
                     var addModal = new jBox('Modal',
-                            {content:$('#addModal'), closeButton:false});
+                            {content:$('#addModal'), closeButton:false, closeOnClick:false});
                     addModal.open();
 
                     //绑定一些事件
                     $('#addModal .model-top a').click(function (){
                         addModal.close();
+                        addModal.destroy();
                     });
                 });
             });
@@ -55,12 +58,13 @@
             $('.sl-role-manager-btn').click(function (){
                 $('#addModal').load('./roleManagerDialog.html', function(){
                     var addModal = new jBox('Modal',
-                            {content:$('#addModal'), closeButton:false});
+                            {content:$('#addModal'), closeButton:false, closeOnClick:false});
                     addModal.open();
 
                     //绑定一些事件
                     $('#addModal .model-top a').click(function (){
                         addModal.close();
+                        addModal.destroy();
                     });
                 });
             });

@@ -73,22 +73,24 @@
                 if(index == 1){ //批量导入设备
                     $('#myModal').load('./batchAddDialog.html', function(){
                         var model = new jBox('Modal',
-                                {content:$('#myModal'), closeButton:false});
+                                {content:$('#batchAddModal'), closeButton:false, closeOnClick:false});
                         model.open();
 
-                        $('#myModal .model-top a').click(function (){
+                        $('#batchAddModal .model-top a').click(function (){
                             model.close();
+                            model.destroy();
                         });
                     });
                 }else{ //添加设备
                     $('#addModal').load('./createStepDialog.html', function(){
                         var addModal = new jBox('Modal',
-                                {content:$('#addModal'), closeButton:false});
+                                {content:$('#stepModal'), closeButton:false, closeOnClick:false});
                         addModal.open();
 
                         //绑定一些事件
-                        $('#addModal .model-top a').click(function (){
+                        $('#stepModal .model-top a').click(function (){
                             addModal.close();
+                            addModal.destroy();
                         });
                     });
                 }

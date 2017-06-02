@@ -143,15 +143,16 @@ body> nav{
     border-bottom: 2px solid #437FBA;
 }
 
+
 .sl-dialog .model-top p{
     text-align: center;
     font-size: 18px;
     height:40px;
     line-height: 40px;
-    width:95%;
+    width:calc(100% - 30px);
 }
 
-#typeModal .model-top p{
+#labelModal .model-top p{
     text-align: left;
     font-size: 18px;
     height:40px;
@@ -160,13 +161,13 @@ body> nav{
     margin-left:10px;
 }
 
-#typeModal li{
+#labelModal li{
     margin-bottom:5px;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
 }
 
-#typeModal .model-content button{
+#labelModal .model-content button{
     background-color: #437FBA;
     color:white;
     border-radius: 5px;
@@ -175,18 +176,18 @@ body> nav{
     cursor: pointer;
 }
 
-#typeModal .model-content table{
+#labelModal .model-content table{
     font-size: 14px;
     font-weight: 300;
     width:560px;
     margin-top: 10px;
 }
 
-#typeModal .model-content table tr:not(:first-child):nth-of-type(even), .sl-distri-table tr:not(:first-child):nth-of-type(even){
+#labelModal .model-content table tr:not(:first-child):nth-of-type(even), .sl-distri-table tr:not(:first-child):nth-of-type(even){
     background-color: #F0F0F0;
 }
 
-#typeModal .model-content table tr th{
+#labelModal .model-content table tr th{
     font-weight: 500;
 }
 
@@ -195,17 +196,15 @@ body> nav{
     padding:5px;
 }
 
-#typeModal .model-content table tr th, #typeModal .model-content table tr td, .sl-distri-table tr td{
+#labelModal .model-content table tr th, #labelModal .model-content table tr td, .sl-distri-table tr td{
     padding:10px 5px;
     font-size: 12px;
 }
 
 .sl-dialog .model-top a{
     font-size: 14px;
-    height:40px;
-    line-height: 40px;
-    width:5%;
     text-align: center;
+    padding:10px;
 }
 
 .sl-dialog .model-bottom{

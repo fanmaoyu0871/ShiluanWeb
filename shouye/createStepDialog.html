@@ -7,15 +7,129 @@
             height:auto;
             width:auto;
         }
+
+        .mui-switch {
+            width: 52px;
+            height: 31px;
+            position: relative;
+            border: 1px solid #dfdfdf;
+            background-color: #fdfdfd;
+            box-shadow: #dfdfdf 0 0 0 0 inset;
+            border-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-clip: content-box;
+            display: inline-block;
+            -webkit-appearance: none;
+            user-select: none;
+            outline: none; }
+        .mui-switch:before {
+            content: '';
+            width: 29px;
+            height: 29px;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            border-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+        .mui-switch:checked {
+            border-color: #64bd63;
+            box-shadow: #64bd63 0 0 0 16px inset;
+            background-color: #64bd63; }
+        .mui-switch:checked:before {
+            left: 21px; }
+        .mui-switch.mui-switch-animbg {
+            transition: background-color ease 0.4s; }
+        .mui-switch.mui-switch-animbg:before {
+            transition: left 0.3s; }
+        .mui-switch.mui-switch-animbg:checked {
+            box-shadow: #dfdfdf 0 0 0 0 inset;
+            background-color: #64bd63;
+            transition: border-color 0.4s, background-color ease 0.4s; }
+        .mui-switch.mui-switch-animbg:checked:before {
+            transition: left 0.3s; }
+        .mui-switch.mui-switch-anim {
+            transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
+        .mui-switch.mui-switch-anim:before {
+            transition: left 0.3s; }
+        .mui-switch.mui-switch-anim:checked {
+            box-shadow: #64bd63 0 0 0 16px inset;
+            background-color: #64bd63;
+            transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
+        .mui-switch.mui-switch-anim:checked:before {
+            transition: left 0.3s; }
+
+        .sl-push-box input{
+            margin-left: 5px;
+        }
+
+        .sl-label-box{
+            margin-top: -15px;
+            margin-left: 5px;
+            width:550px;
+        }
+
+        .sl-label-box li{
+            float: left;
+            margin-right:20px;
+            margin-top:10px;
+        }
+
+        .sl-label-box li a{
+            padding:5px 10px;
+            border-radius: 5px;
+            display: block;
+            background-color: white;
+            color:#437FBA;
+            border: 1px solid #437FBA;
+        }
+        .sl-label-box li a.active{
+            background-color: #437FBA;
+            color:white;
+        }
     </style>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/comm.css">
     <link href="../css/jBox.css" rel="stylesheet">
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="http://code.jboxcdn.com/0.4.8/jBox.min.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            $('.mui-switch').click(function (){
+                $('.sl-push-box').slideToggle(500);
+            });
+
+            $('.sl-label-box > li:not(:last-child) a').click(function (){
+                $(this).toggleClass('active', '');
+            });
+
+            $('.sl-label-box > li:last-child a').click(function () {
+
+                $('#labelCreateDialog').load('labelCreateDialog.html', function(){
+                    var tmpModal = new jBox('Modal',
+                            {content: $('#createLabelModal'), closeButton: false, closeOnClick:false});
+                    tmpModal.open();
+
+                    $('#createLabelModal .model-top a').click(function () {
+                        tmpModal.close();
+                        tmpModal.destroy();
+                    });
+                });
+                });
+
+
+        })
+    </script>
 </head>
 <body>
-<div id="addModal" style="width:700px; overflow: hidden">
+<div id="stepModal" style="width:700px; overflow: hidden">
     <div class="sl-step-container" style="width:2800px;">
         <!--step1-->
         <div class="sl-dialog fl" style="width: 700px; background-color: white">
@@ -134,11 +248,35 @@
                     <input placeholder="电子邮箱地址" type="text" style="height:25px;width:150px;">
                     <span style="display:inline-block; margin-top:10px;color:red;font-size:8px;">温馨提示：为了能更好的管理设备，请设定该设备名称</span>
                 </div>
-                <div style="text-align: left;margin-top:15px;margin-left:20px;">
-                    <span>选择标签：</span>
+                <div class="clearfix" style="text-align: left;margin-top:20px;margin-left:20px;">
+                    <span class="fl">选择标签：</span>
+                    <ul class="fl sl-label-box clearfix">
+                        <li><a class="active" href="#">杭州</a></li>
+                        <li><a href="#">杭州</a></li>
+                        <li><a href="#">杭州</a></li>
+                        <li><a href="#">杭州</a></li>
+                        <li><a href="#">杭州</a></li>
+                        <li><a href="#">杭州</a></li>
+                        <li><a href="#">杭州</a></li>
+                        <li><a href="#">杭州</a></li>
+                        <li><a href="#">杭州</a></li>
+                        <li><a href="#">杭州</a></li>
+                        <li><a href="#">杭州</a></li>
+                        <li><a href="#">杭州</a></li>
+                        <li><a href="#">+</a></li>
+                    </ul>
                 </div>
-                <div style="text-align: left;margin-top:15px;margin-left:20px;">
+                <div style="text-align: left;margin-top:15px;margin-left:20px;height:60px;line-height: 60px">
                     <span>报警推送：</span>
+                    <label><input class="mui-switch mui-switch-anim" type="checkbox"></label>
+                </div>
+                <div class="sl-push-box" style="text-align: left; margin-left: 100px; display: none">
+                    <div>
+                        <input type="checkbox">短信(0.1/条)
+                        <input type="checkbox">邮件
+                        <input type="checkbox">APP
+                    </div>
+                    <div style="margin-top: 5px;"><span style="color:red;font-size: 12px;">温馨提示：产生的短信费用将扣除钱包余额或与我们客服联系进行下月结算。</span></div>
                 </div>
             </div>
             <div class="model-bottom">
@@ -283,30 +421,34 @@
 <!--管理按钮事件对话框-->
 <div id="typeModal"></div>
 
+<!--标签创建对话框-->
+<div id="labelCreateDialog"></div>
+
 <script type="text/javascript">
     $(function (){
         $('.nextBtn').click(function (){
             var index = $(this).attr("index");
             var width = $('.sl-dialog').width();
-            $('.sl-step-container').animate({'margin-left':index*-width + 'px'});
+            $('.sl-step-container').animate({'margin-left':index*-700 + 'px'});
         });
 
         $('.prevBtn').click(function(){
             var index = $(this).attr("index");
             var width = $('.sl-dialog').width();
-            $('.sl-step-container').animate({'margin-left':-(index-1)*width + 'px'});
+            $('.sl-step-container').animate({'margin-left':-(index-1)*700 + 'px'});
         });
 
         //管理按钮事件
         $('.managerBtn').click(function(){
             $('#typeModal').load('managerDialog.html', function(){
                 var model = new jBox('Modal',
-                        {content:$('#typeModal'), closeButton:false});
+                        {content:$('#labelModal'), closeButton:false, closeOnClick:false});
 
                 model.open();
 
-                $('#typeModal .model-top a').click(function (){
+                $('#labelModal .model-top a').click(function (){
                     model.close();
+                    model.destroy();
                 });
             });
         });

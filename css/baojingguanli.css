@@ -48,7 +48,7 @@
 }
 
 .sl-guizeliebiao .table{
-    margin:20px;
+    margin:10px 20px 20px;
     padding-bottom: 20px;
 }
 
@@ -99,4 +99,25 @@
 
 .sl-guizeliebiao{
     box-shadow: #A29F9F 0px 1px 3px;
+}
+
+.sl-li-transition{
+    height:60px;
+    line-height: 60px;
+    padding-left: 10px;
+}
+
+.sl-li-transition a{
+    padding:5px 10px;
+    color:white;
+    background-color: #437FBA;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.sl-guizeliebiao form a.managerBtn{
+    padding: 8px 15px;
+    background-color: #437FBA;
+    color: white;
+    border-radius: 5px;
 }
